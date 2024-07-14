@@ -1,0 +1,82 @@
+.Loader {
+  &-circle {
+    --duration: 1.8s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    transform: scale(0.7);
+    &:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      background: #056573;
+      top: 37px;
+      left: 19px;
+      transform: translate(-18px, -18px);
+      animation: dotCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+    }
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      rect,
+      polygon,
+      circle {
+        fill: none;
+        stroke: #eaeaea;
+        stroke-width: 10px;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+      }
+
+      circle {
+        stroke-dasharray: calc(200 / 4 * 3) calc(200 / 4) calc(200 / 4 * 3) calc(200 / 4);
+        stroke-dashoffset: 75;
+        animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+      }
+    }
+  }
+
+  &--wide {
+    width: 100%;
+    margin: 30px 0;
+    display: grid;
+    place-content: center;
+  }
+
+  &--grows {
+    flex-grow: 1;
+  }
+}
+@keyframes dotCircle {
+  25% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(18px, -18px);
+  }
+  75% {
+    transform: translate(0, -36px);
+  }
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+
+@keyframes pathCircle {
+  25% {
+    stroke-dashoffset: 125;
+  }
+  50% {
+    stroke-dashoffset: 175;
+  }
+  75% {
+    stroke-dashoffset: 225;
+  }
+  100% {
+    stroke-dashoffset: 275;
+  }
+}
