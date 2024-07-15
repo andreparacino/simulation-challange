@@ -10,8 +10,6 @@ import { groupByEnergyConsumption } from "@/engine/utils";
 const App = () => {
   const { isSimulationRunning, simulationResults, startSimulation } = useSimulation();
 
-  console.log(simulationResults);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-start">
       <Header />
