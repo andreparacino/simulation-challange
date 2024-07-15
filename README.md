@@ -1,7 +1,7 @@
 ## Simulation challenge
 
 Hi!
-You'll find all of my submission in separate branches. Precisely:
+You'll find all of my submissions in separate branches. Precisely:
 `task1`
 `task1-bonus1`
 `task2a`
