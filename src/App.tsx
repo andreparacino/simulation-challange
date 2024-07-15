@@ -14,8 +14,6 @@ const App = () => {
   const { isSimulationRunning, simulationResults, prevConcurrencyFactor, startSimulation } =
     useSimulation();
 
-  console.log("simulationResults", simulationResults);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-start">
       <Header />
